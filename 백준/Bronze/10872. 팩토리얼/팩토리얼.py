@@ -1,6 +1,11 @@
 from functools import reduce
 
-N = int(input())
-
-answer = reduce(lambda x,y : x*y ,[i for i in range(1,N+1)], 1)
-print(answer)
+def answer(n) :
+    if int(n) == 0 :
+        print(1)
+    else :
+        lists = [i for i in range(1, (int(n)+1))]
+        print(reduce(lambda x,y : x*y , lists))
+        
+        
+answer(input())
